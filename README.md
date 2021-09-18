@@ -1,4 +1,4 @@
-# Assignment : - add bootstrap and instead of fetch use Axios ? ove here also read more about use Uffect & useState Hooks 
+# Assignment : - add bootstrap and instead of fetch use Axios ? ove here also read more about use effect & useState Hooks 
 
 
 # Getting Started with Create React App
