@@ -5,7 +5,6 @@ export class App extends Component{
 
   constructor(props){
     super(props);
-
     this.that= this;
     this.state= {
       userName:props.name,
@@ -13,7 +12,40 @@ export class App extends Component{
     };
   }
 
+
+// remainig lifecycle methoods 
+componentWillUnmount(){
+  console.log("componentWillUnmount()");
+}
+
+
+componentWillMount(){
+  console.log("ComponentWillMount()")
+}
+shouldComponentUpdate(nextProps,nextState){
+  console.log("shouldComponentUpdate()")
+  return true;
+}
+
+componentDidUpdate(){
+  console.log("componentDidUpdate()")
+}
+
+
+   onClickHandle(e){
+     this.setState({change:false});
+    //   console.log('changing the state')
+    //   fetch('https://api.github.com/users/'+this.state?.userName+'/followers')
+    //   .then(response=>response.json())
+    //   .then(dataFromAPI=>{
+    //   this.setState({data:dataFromAPI});
+    // })
+    //   .catch(error=>console.log(error))
+    } 
+  
+
     componentDidMount(){
+      console.log("component did mount")
       if(this.state.userName){
         fetch('https://api.github.com/users/'+this.state?.userName+'/followers')
         .then(response=>response.json())
@@ -21,11 +53,8 @@ export class App extends Component{
         this.setState({data:dataFromAPI});
       })
         .catch(error=>console.log(error))
-      }
-      
+      } 
     }
-
-
   renderTableData(){
     return this.state.data.map((item,ctr)=>{
       const {login,
@@ -63,24 +92,18 @@ export class App extends Component{
   }
 
   render (){
+
+    {console.log("render()");}
     return  <div>
+       <button  onClick={this.onClickHandle.bind(this)}> Refresh</button>
         <div> These {this.state.userName} 's Followers</div>
         <table>
           <tbody>
             {this.renderTableData()}
           </tbody>
         </table>
+
+       
     </div>;
   }
 };
-
-
-// class CustomRowCompoenet extends Compoenet{
-
-//   constructor(props){
-//     super(props);
-//   }
-//   render(){
-//     return <tr>props</tr>
-//   }
-// }
