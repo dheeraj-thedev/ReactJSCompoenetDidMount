@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {App} from './Pages/App';
+//import {App} from './Pages/App';
+import FunctionalApp from './Pages/FunctionalApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App name="dheeraj-thedev" />
+    <FunctionalApp name="dheeraj-thedev" />
   </React.StrictMode>,
   document.getElementById('root')
 );
