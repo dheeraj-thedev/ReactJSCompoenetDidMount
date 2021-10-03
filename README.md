@@ -1,3 +1,13 @@
+
+# 03-10-2021 - Functional LIfecycle Example 
+
+1. UseEffect 
+    pros
+    cons
+
+
+
+
 # Assignment : - add bootstrap and instead of fetch use Axios ? ove here also read more about use effect & useState Hooks 
 
 

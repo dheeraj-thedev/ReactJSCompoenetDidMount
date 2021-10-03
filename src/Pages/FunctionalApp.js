@@ -1,5 +1,5 @@
 import React , {useState, useEffect} from "react"
-
+import ParentComponent from "./LifeCycleDemoFunctinal"
 
 const FunctionalApp = (props)=>{
 
@@ -61,6 +61,8 @@ const FunctionalApp = (props)=>{
 
     return(
         <div>
+
+          <ParentComponent></ParentComponent>
         <button > Refresh</button>
          <div> These {myState.userName} 's Followers</div>
          <table>
@@ -75,4 +77,7 @@ const FunctionalApp = (props)=>{
 }
 
 export default FunctionalApp
+
+
+
 

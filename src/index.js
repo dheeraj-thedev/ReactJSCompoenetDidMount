@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ParentComponent from "./Pages/LifeCycleDemoFunctinal"
 import './index.css';
 //import {App} from './Pages/App';
 import FunctionalApp from './Pages/FunctionalApp';
@@ -7,7 +8,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FunctionalApp name="dheeraj-thedev" />
+    {/* <FunctionalApp name="dheeraj-thedev" /> */}
+    <ParentComponent></ParentComponent>
   </React.StrictMode>,
   document.getElementById('root')
 );
